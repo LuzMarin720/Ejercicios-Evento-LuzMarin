@@ -64,9 +64,9 @@ const mostrarNotas = () => {
         noteDiv.innerHTML = `
             <div class="card-header">
                 <div class="list-group w-100 d-flex justify-content-between align-items-center">
-                    <label class="list-group-item d-flex align-items-center">
+                    <label class="list-group-item w-100 d-flex align-items-center">
                         <input onClick="marcarRealizada(${nota.id})" class="form-check-input me-1" type="checkbox" ${nota.realizada ? "checked" : ""}>
-                        <h2 class="mb-0">${nota.titulo}</h2>
+                        <h2 class="titulo mb-0">${nota.titulo}</h2>
                     </label>
                 </div>
             </div>
@@ -80,6 +80,7 @@ const mostrarNotas = () => {
         container.appendChild(noteDiv);
     });
 };
+
 
 const agregarNota = () => {
     const titulo = document.getElementById('titulo').value;

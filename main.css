@@ -61,30 +61,8 @@ input {
 }
 
 
-
-    
-/* primer ejercicio 
-input {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 80%;
+.card-header .titulo {
+    white-space: normal; /* Permite que el texto envuelva a la siguiente línea */
+    word-wrap: break-word; /* Asegura que las palabras largas se ajusten correctamente */
+    width: 100%; /* Asegura que el elemento ocupe todo el ancho del contenedor */
 }
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #28a745;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-#resultado {
-    margin-top: 20px;
-    font-size: 1.2em;
-}
-*/
