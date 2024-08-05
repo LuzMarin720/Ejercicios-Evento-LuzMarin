@@ -1,0 +1,90 @@
+
+body {
+    
+   display: flex;
+    
+    height: 30px;
+    margin: 100px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction:column;
+    padding: 10px 20px; 
+    width: 15%;
+   margin-bottom: 5%;
+   height: 30px;
+      
+   
+}
+    
+/*-----------------------------------*/
+
+.punto2 {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 200px;
+}
+
+/*css*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+ flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.converter {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+input {
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+    
+/* primer ejercicio 
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+*/
