@@ -61,11 +61,11 @@ const mostrarNotas = () => {
 
     notasFiltradas.forEach(nota => {
         const noteDiv = document.createElement('div');
-        noteDiv.className = 'card';
+        noteDiv.className = 'card flex-grow-1';
         noteDiv.innerHTML = `
             <div class="card-header">
                 <div class="list-group">
-                    <label class="list-group-item w-100">
+                    <label class="list-group-item w-100 d-flex align-items-center flex-grow-1">
                         <input onClick="marcarRealizada(${nota.id})" class="form-check-input me-1" type="checkbox" ${nota.realizada ? "checked" : ""}>
                         <h2 class="titulo mb-0">${nota.titulo}</h2>
                     </label>
@@ -81,7 +81,6 @@ const mostrarNotas = () => {
         container.appendChild(noteDiv);
     });
 };
-
 
 const agregarNota = () => {
     const titulo = document.getElementById('titulo').value;

@@ -79,8 +79,3 @@ input {
     flex-wrap: wrap;
     gap: 1rem;
 }
-
-.container-fluid.bg-primary {
-    padding-left: 0;
-    padding-right: 0;
-}
