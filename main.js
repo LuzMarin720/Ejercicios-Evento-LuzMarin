@@ -35,7 +35,8 @@ document.getElementById('pesos').addEventListener('input', convertCurrency);
 
 let ArrayNotas = [
     { id: 1, titulo: 'Sacar la basura', texto: 'Mi mamá me va a retar sino lo hago', realizada: false },
-    { id: 2, titulo: 'Hacer la tarea', texto: 'Terminar los ejercicios de matemáticas', realizada: true }
+    { id: 2, titulo: 'Comer', texto: 'Quedo comida de ayer', realizada: true },
+    { id: 3, titulo: 'Estudiar eventos', texto: 'Estoy flojo de papeles y no voy aprobar la task 3', realizada: false}
 ];
 
 let idGlobal = ArrayNotas[ArrayNotas.length - 1].id;
@@ -43,10 +44,10 @@ let idGlobal = ArrayNotas[ArrayNotas.length - 1].id;
 const mostrarNotas = () => {
     const container = document.getElementById('notasContainer');
     container.innerHTML = '';
-    
+
     const filtroTexto = document.getElementById('filtroTexto').value.toLowerCase();
     const filtroRealizadas = document.getElementById('filtroRealizadas').checked;
-    
+
     const notasFiltradas = ArrayNotas.filter(nota => {
         const cumpleTexto = nota.titulo.toLowerCase().includes(filtroTexto) || nota.texto.toLowerCase().includes(filtroTexto);
         const cumpleRealizada = !filtroRealizadas || nota.realizada;
@@ -60,18 +61,18 @@ const mostrarNotas = () => {
 
     notasFiltradas.forEach(nota => {
         const noteDiv = document.createElement('div');
-        noteDiv.className = 'card mb-3 ms-3';
+        noteDiv.className = 'card';
         noteDiv.innerHTML = `
             <div class="card-header">
-                <div class="list-group w-100 d-flex justify-content-between align-items-center">
-                    <label class="list-group-item w-100 d-flex align-items-center">
+                <div class="list-group">
+                    <label class="list-group-item w-100">
                         <input onClick="marcarRealizada(${nota.id})" class="form-check-input me-1" type="checkbox" ${nota.realizada ? "checked" : ""}>
                         <h2 class="titulo mb-0">${nota.titulo}</h2>
                     </label>
                 </div>
             </div>
             <div class="card-body d-flex flex-column flex-grow-1">
-                <p class="card-text">${nota.texto}</p>
+                <p class="card-text ${(nota.realizada) ? 'tachado' : 'nonTachado' }">${nota.texto}</p>
                 <div class="mt-auto text-center">
                     <button class="btn btn-danger btn-lg" onclick="borrarNota(${nota.id})">Borrar nota</button>
                 </div>
@@ -112,6 +113,7 @@ const limpiarForm = () => {
 };
 
 const marcarRealizada = (id) => {
+
     const nota = ArrayNotas.find(nota => nota.id === id);
     if (nota) {
         nota.realizada = !nota.realizada;
